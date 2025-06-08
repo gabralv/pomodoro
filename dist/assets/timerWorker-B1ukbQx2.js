@@ -1,0 +1,1 @@
+(function(){"use strict";let t=!1;self.onmessage=function(o){if(t)return;t=!0;const a=o.data,{activeTask:c,secondsRemaining:i}=a,n=c.startDate+i*1e3,u=Date.now();let e=Math.ceil((n-u)/1e3);function s(){self.postMessage(e);const f=Date.now();e=Math.floor((n-f)/1e3),setTimeout(s,1e3)}s()}})();
